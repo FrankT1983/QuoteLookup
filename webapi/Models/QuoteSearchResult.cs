@@ -2,8 +2,8 @@
 {
     public class QuoteSearchResult
     {
-        public string QuoteId {  get; set; }
+        public string QuoteId { get; set; }
 
-        public string MovieId { get; set;}
+        public string MovieId { get; set; }
     }
 }

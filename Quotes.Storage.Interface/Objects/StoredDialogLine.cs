@@ -6,9 +6,9 @@ public class StoredDialogLine
     {
         this.StartAfterSeconds = startAfterSeconds;
         this.Character = character;
-        this.Line = line;        
+        this.Line = line;
     }
-        
+
 
     public string Line { get; set; }
 
