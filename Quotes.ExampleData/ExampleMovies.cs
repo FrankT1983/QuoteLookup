@@ -1,5 +1,10 @@
 ﻿namespace Quotes.ExampleData;
 
+public static class ExampleActors
+{
+    public static Actor SW = new Actor("sweaver", new Name("Sigourney", "Weaver"));
+}
+
 public static class ExampleMovies
 {
     public static Movie Aliens = new Movie(
@@ -95,7 +100,7 @@ public static class ExampleMovies
 
 public static class ExampleCharacters
 {
-    public static Character AliensEllenRippley = new Character("1", new Name("Ellen", "Rippley"));
+    public static Character AliensEllenRippley = new Character("1", new Name("Ellen", "Rippley"), ExampleActors.SW.Id);
 
     public static Character RoyBatty = new Character("Batty", new Name("Roy", "Rippley"));
 
