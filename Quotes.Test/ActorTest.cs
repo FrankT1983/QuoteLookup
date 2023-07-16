@@ -21,7 +21,7 @@ namespace Quotes.Test
             var characterLastName = "Rippley";
 
             var uut = new Quotes(new InMemoryQuotesStorage());
-            uut.Actors.Add(new Actor(new Name("Sigourney", "Weaver")));
+            await uut.Actors.AddAsync(new Actor("sw", new Name("Sigourney", "Weaver")));
 
 
             var movie = new Movie(movieId, movieName);
@@ -38,4 +38,5 @@ namespace Quotes.Test
             Assert.That(m.Characters.Count(), Is.EqualTo(1));
         }
     }
+
 }

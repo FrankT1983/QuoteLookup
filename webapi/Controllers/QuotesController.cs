@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Quotes.Storage.Interface;
+using webapi.Models;
 
 namespace webapi.Controllers;
 
@@ -18,12 +19,12 @@ public class QuotesController : ControllerBase
 
     [HttpGet]
     [Route("")]
-    public async Task GetQuotes([FromQuery] string? movie, [FromQuery] string? actor, [FromQuery] int? start, [FromQuery] int? count)
+    public async Task<QuoteSearchResults> GetQuotes([FromQuery] string? movie, [FromQuery] string? actor, [FromQuery] int? start, [FromQuery] int? count)
     {
         // todo: pagination
-
-        Console.WriteLine("doo");
         // Todo: rethink return objects
-        await this.quotes.Search(movie ?? string.Empty, actor ?? string.Empty);       
+        await this.quotes.Search(movie ?? string.Empty, actor ?? string.Empty);
+
+        return new QuoteSearchResults();
     }
 }
