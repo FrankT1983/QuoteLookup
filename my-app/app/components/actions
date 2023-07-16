@@ -1,0 +1,2 @@
+import {  MoviesResponse } from '../api/api';
+
